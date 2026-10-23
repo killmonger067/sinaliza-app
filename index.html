@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protótipo educativo de português para Libras.">
+  <title>Sinaliza — Português para Libras</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header><div class="top"><div class="logo" aria-hidden="true">S</div><div><div class="brand">Sinaliza</div><div class="tagline">Português para Libras · protótipo educativo</div></div></div></header>
+<main>
+  <section class="intro"><div class="eyebrow">Comunicação mais acessível</div><h1>Transforme suas frases<br>em aprendizado de Libras.</h1><p>Digite uma frase em português e explore como o aplicativo poderá organizar uma tradução visual, passo a passo.</p></section>
+  <div class="layout">
+    <section class="panel" aria-labelledby="input-title"><h2 id="input-title">O que você quer dizer?</h2><p class="hint">Digite uma frase ou experimente um dos exemplos abaixo.</p><label for="phrase" class="hint" style="display:block;margin-bottom:8px">Sua frase em português</label><textarea id="phrase" maxlength="500" placeholder="Ex.: Olá, tudo bem? Meu nome é Ana."></textarea><div class="actions"><button class="primary" id="translate">Preparar demonstração&nbsp; →</button><button class="secondary" id="clear">Limpar</button></div><div class="status" id="charcount" aria-live="polite" style="margin-top:10px">0 / 500 caracteres</div>
+      <div class="examples"><h2>Experimente uma frase</h2><div class="chips"><button class="chip" data-phrase="Olá, tudo bem?">Olá, tudo bem?</button><button class="chip" data-phrase="Qual é o seu nome?">Qual é o seu nome?</button><button class="chip" data-phrase="Muito obrigado pela ajuda.">Muito obrigado pela ajuda.</button><button class="chip" data-phrase="Eu quero aprender Libras.">Quero aprender Libras</button></div></div>
+    </section>
+    <section class="panel" aria-labelledby="result-title"><h2 id="result-title">Demonstração da tradução</h2><p class="hint">Aqui aparecerá a sequência didática disponível para a frase.</p><div class="result-empty" id="empty"><div class="empty-icon" aria-hidden="true">🤟</div><strong>Sua demonstração aparecerá aqui</strong><span>Digite uma frase e selecione “Preparar demonstração”.</span></div><div class="result-content" id="result" aria-live="polite"><span class="pill">DEMONSTRAÇÃO + VLibras</span><h3 id="result-heading">Frase recebida</h3><p class="explanation" id="result-explanation"></p><div class="translation-box"><div class="translation-label">Texto que você quer traduzir</div><p id="translation-text" class="translation-text"></p><p class="translation-help">Use o botão flutuante do VLibras no canto da página. Selecione este texto ou siga as opções oferecidas pelo widget para iniciar a demonstração em Libras.</p></div><div class="steps" id="steps"></div></div></section>
+  </div>
+  <div class="notice"><strong>Importante:</strong> o widget oficial do VLibras foi adicionado como recurso externo de acessibilidade. Ele depende de internet e pode não funcionar ao abrir o arquivo local em todos os navegadores. A demonstração do painel continua sendo ilustrativa; não é uma tradução própria do Sinaliza. Para uso real, confira a qualidade da tradução e não use como substituto de intérprete em situações críticas.</div>
+  <div class="footer">Sinaliza · protótipo inicial para fins educativos</div>
+</main>
+<script src="js/app.js" defer></script>
+<!-- O script oficial inicializa o widget automaticamente. -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+</body>
+</html>
